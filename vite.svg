@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>150 Almoços Fitness</title>
+  <meta name="description" content="150 Almoços Fitness práticos, econômicos e saborosos para nunca mais ficar sem ideias na dieta." />
+
+  <!-- Preview de compartilhamento (WhatsApp, Facebook, Telegram e X) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://almocosfitness.online/" />
+  <meta property="og:site_name" content="150 Almoços Fitness" />
+  <meta property="og:title" content="150 Almoços Fitness" />
+  <meta property="og:description" content="Receitas práticas, econômicas e saborosas para comer bem sem enjoar da dieta." />
+  <meta property="og:image" content="https://almocosfitness.online/preview-150-almocos-fitness.jpg" />
+  <meta property="og:image:secure_url" content="https://almocosfitness.online/preview-150-almocos-fitness.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="628" />
+  <meta property="og:image:alt" content="Coleção 150 Almoços Fitness, com receitas práticas, econômicas e saborosas" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="150 Almoços Fitness" />
+  <meta name="twitter:description" content="Receitas práticas, econômicas e saborosas para comer bem sem enjoar da dieta." />
+  <meta name="twitter:image" content="https://almocosfitness.online/preview-150-almocos-fitness.jpg" />
+  <meta name="twitter:image:alt" content="Coleção 150 Almoços Fitness" />
+
+  <!-- Tajokefy: cole no <head>, antes dos outros scripts -->
+  <script>
+  (function (w, d) {
+    try {
+      var K = "_tjk", RE = /^[A-Za-z0-9]{20}$/, id = null;
+      try { id = w.localStorage.getItem(K); } catch (e) {}
+      if (!RE.test(id || "")) {
+        var m = d.cookie.match(/(?:^|; )_tjk=([A-Za-z0-9]{20})/);
+        id = m ? m[1] : null;
+      }
+      // Nunca adota o src que veio na URL: um link compartilhado juntaria pessoas diferentes.
+      if (!RE.test(id || "")) {
+        var c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", a = new Uint8Array(20);
+        w.crypto.getRandomValues(a);
+        id = "";
+        for (var i = 0; i < 20; i++) id += c[a[i] % 62];
+      }
+      try { w.localStorage.setItem(K, id); } catch (e) {}
+      d.cookie = K + "=" + id + "; Max-Age=34560000; Path=/; SameSite=Lax" + (w.location.protocol === "https:" ? "; Secure" : "");
+      var u = new URL(w.location.href);
+      if (u.searchParams.get("src") !== id) {
+        u.searchParams.set("src", id);
+        w.history.replaceState(w.history.state, "", u.toString());
+      }
+      w.__tjk = { id: id };
+    } catch (e) {}
+  })(window, document);
+  </script>
+  <!-- Pixel da Meta deste domínio já no <head>: carrega junto com a página (sem esperar o painel),
+       para quem sai rápido também ser contado. O s.js do Tajokefy usa este mesmo Pixel e o mesmo eventID. -->
+  <link rel="preconnect" href="https://connect.facebook.net" />
+  <link rel="preconnect" href="https://painel.tajokefy.online" />
+  <script>
+  (function (w, d) {
+    try {
+      var P = "1830821894739237";
+      if (w.fbq) return;
+      var n = (w.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); });
+      if (!w._fbq) w._fbq = n;
+      n.push = n; n.loaded = true; n.version = "2.0"; n.queue = [];
+      var t = d.createElement("script"); t.async = true; t.src = "https://connect.facebook.net/en_US/fbevents.js";
+      var s0 = d.getElementsByTagName("script")[0]; s0.parentNode.insertBefore(t, s0);
+      var tjk = (w.__tjk = w.__tjk || {});
+      // external_id em texto: o Pixel faz o hash (o servidor manda o mesmo hash).
+      w.fbq("init", P, tjk.id ? { external_id: tjk.id } : {});
+      var eid = w.crypto && w.crypto.randomUUID ? w.crypto.randomUUID() : "pv-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+      w.fbq("track", "PageView", {}, { eventID: eid });
+      tjk.pixel = P;
+      tjk.pv = eid;
+    } catch (e) {}
+  })(window, document);
+  </script>
+  <script src="https://painel.tajokefy.online/s.js?v=2" async></script>
+
+  <!-- Abre cedo as ligações aos domínios utilizados nesta página -->
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <link rel="dns-prefetch" href="https://checkout.hotmart.com" />
+  <link rel="dns-prefetch" href="https://pay.hotmart.com" />
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "x4e2m6yo77");
+  </script>
+  <script type="module" crossorigin src="/assets/index-DIUwJWj9.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DYnUfONv.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
