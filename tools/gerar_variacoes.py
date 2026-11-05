@@ -13,9 +13,9 @@ COMPLETO = "https://pay.wiapy.com/0IyEFtOa6kiN"  # 150 Almoços Fitness COMPLETO
 BASICO = "https://pay.wiapy.com/WSMiDkueHtaW"    # Oferta Básica R$ 18,00
 
 VARIACOES = {
-    "1": {"completo": COMPLETO, "basico": BASICO, "pixel": False},
-    "2": {"completo": COMPLETO, "basico": BASICO, "pixel": False},
-    "3": {"completo": COMPLETO, "basico": BASICO, "pixel": False},
+    "1": {"completo": COMPLETO, "basico": "https://pay.cakto.com.br/3bo9nuh_1284129?src=checkout1", "pixel": False},
+    "2": {"completo": COMPLETO, "basico": "https://pay.cakto.com.br/3bo9nuh_1284152?src=checkout2", "pixel": False},
+    "3": {"completo": COMPLETO, "basico": "https://pay.cakto.com.br/3bo9nuh_1284151?src=checkout3", "pixel": False},
     "4": {"completo": COMPLETO, "basico": BASICO, "pixel": False},
     "g": {"completo": COMPLETO, "basico": BASICO, "pixel": False},  # Google Ads
 }

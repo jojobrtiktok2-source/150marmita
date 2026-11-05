@@ -12,11 +12,14 @@
     b.addEventListener("click", irParaOfertas);
   });
 
-  // Checkout recebe os parâmetros da URL (menos ab_variant)
+  // Checkout recebe os parâmetros da URL (menos ab_variant). Um parâmetro que já vem
+  // no link, como ?src=checkout1, tem prioridade sobre o da URL.
   var params = new URLSearchParams(window.location.search);
-  document.querySelectorAll('a[href*="pay.wiapy.com"]').forEach(function (a) {
+  document.querySelectorAll('a[href*="pay.wiapy.com"], a[href*="pay.cakto.com.br"]').forEach(function (a) {
     var u = new URL(a.href);
-    params.forEach(function (valor, chave) { if (chave !== "ab_variant") u.searchParams.set(chave, valor); });
+    params.forEach(function (valor, chave) {
+      if (chave !== "ab_variant" && !u.searchParams.has(chave)) u.searchParams.set(chave, valor);
+    });
     u.searchParams.delete("ab_variant");
     a.href = u.href;
   });
