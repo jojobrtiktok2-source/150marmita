@@ -17,8 +17,20 @@ VARIACOES = {
     "2": {"completo": "https://pay.cakto.com.br/59w8hya?src=checkout2", "basico": "https://pay.cakto.com.br/3bo9nuh_1284152?src=checkout2", "pixel": False},
     "3": {"completo": "https://pay.cakto.com.br/59w8hya?src=checkout3", "basico": "https://pay.cakto.com.br/3bo9nuh_1284151?src=checkout3", "pixel": False},
     "4": {"completo": COMPLETO, "basico": BASICO, "pixel": False},
-    "g": {"completo": "https://pay.cakto.com.br/59w8hya_1284532", "basico": "https://pay.cakto.com.br/3bo9nuh_1284530", "pixel": False},  # Google Ads
+    "g": {"completo": "https://pay.cakto.com.br/59w8hya_1284532", "basico": "https://pay.cakto.com.br/3bo9nuh_1284530", "pixel": False, "gtm": True},  # Google Ads
 }
+
+# Google Tag Manager, só no /g (entra logo depois do <meta charset>)
+GTM = """
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KCZ5XCJT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <!-- /Google Tag Manager -->"""
+CHARSET = '<meta charset="UTF-8" />'
 
 # Pixel da Meta (fbq) e o s.js da Tajokefy, que também liga o Pixel pela configuração do painel
 PIXEL = [
@@ -42,6 +54,9 @@ def main():
                 h, n = padrao.subn("\n" if padrao is PIXEL[0] else "", h)
                 assert n == 1, padrao.pattern
             assert "fbq" not in h and "tajokefy.online/s.js" not in h
+        if links.get("gtm"):
+            assert h.count(CHARSET) == 1
+            h = h.replace(CHARSET, CHARSET + GTM)
         os.makedirs(os.path.join(RAIZ, pasta), exist_ok=True)
         with open(os.path.join(RAIZ, pasta, "index.html"), "w", encoding="utf-8") as f:
             f.write(h)
