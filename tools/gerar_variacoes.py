@@ -17,7 +17,7 @@ VARIACOES = {
     "2": {"completo": "https://pay.cakto.com.br/59w8hya?src=checkout2", "basico": "https://pay.cakto.com.br/3bo9nuh_1284152?src=checkout2", "pixel": False},
     "3": {"completo": "https://pay.cakto.com.br/59w8hya?src=checkout3", "basico": "https://pay.cakto.com.br/3bo9nuh_1284151?src=checkout3", "pixel": False},
     "4": {"completo": COMPLETO, "basico": BASICO, "pixel": False},
-    "g": {"completo": COMPLETO, "basico": BASICO, "pixel": False},  # Google Ads
+    "g": {"completo": COMPLETO, "basico": "https://pay.cakto.com.br/3bo9nuh_1284530?src=checkoutg", "pixel": False},  # Google Ads
 }
 
 # Pixel da Meta (fbq) e o s.js da Tajokefy, que também liga o Pixel pela configuração do painel
